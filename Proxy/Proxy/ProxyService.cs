@@ -6,14 +6,10 @@ namespace Proxy
 {
     class ProxyService:IProductService
     {
-        string username, pass;
         public bool authProcess { get; private set; }
         private Products _products = new Products();
         public ProxyService(string username,string pass)
         {
-            this.username = username;
-            this.pass = pass;
-
             if (username == "ahmet" && pass == "1234")
             {
                 Console.WriteLine("Başarıyla Giriş Yapıldı.\n");
